@@ -597,6 +597,10 @@ section {
 .publications-more {
     text-align: center;
     margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* CV Section */
