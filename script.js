@@ -109,7 +109,7 @@ function validateEmail(email) {
 
 // Copy email to clipboard functionality
 function copyEmail() {
-    const email = 'your.email@university.edu';
+    const email = 'koustavagoswami@adobe.com';
     navigator.clipboard.writeText(email).then(() => {
         // You could add a toast notification here
         console.log('Email copied to clipboard');
