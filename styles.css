@@ -544,6 +544,11 @@ section {
     transform: translateY(-3px);
 }
 
+/* Google Scholar icon styling */
+.fa-google-scholar {
+    font-size: 1.1rem;
+}
+
 /* Footer */
 .footer {
     background-color: #1f2937;
