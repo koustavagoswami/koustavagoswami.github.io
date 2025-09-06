@@ -549,6 +549,29 @@ section {
     font-size: 1.1rem;
 }
 
+/* Link styling for hero and about sections */
+.hero-description a,
+.about-text a {
+    color: inherit;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.hero-description a:hover,
+.about-text a:hover {
+    opacity: 0.8;
+}
+
+.research-card a {
+    color: #2563eb;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.research-card a:hover {
+    color: #1d4ed8;
+}
+
 /* Footer */
 .footer {
     background-color: #1f2937;
