@@ -193,11 +193,37 @@ function toggleCard(card) {
 // Alternative approach using event listeners instead of onclick
 document.addEventListener('DOMContentLoaded', () => {
     const highlightCards = document.querySelectorAll('.highlight-card');
-    console.log('Found cards:', highlightCards.length); // Debug log
+    console.log('Found highlight cards:', highlightCards.length); // Debug log
     
     highlightCards.forEach(card => {
         card.addEventListener('click', function() {
             toggleCard(this);
         });
     });
+
+    // Handle detailed research card
+    const detailedCard = document.querySelector('.detailed-research-card');
+    if (detailedCard) {
+        console.log('Found detailed research card'); // Debug log
+        detailedCard.addEventListener('click', function() {
+            toggleDetailedCard(this);
+        });
+    }
 });
+
+// Toggle detailed research card
+function toggleDetailedCard(card) {
+    console.log('Detailed card clicked:', card); // Debug log
+    
+    const isExpanded = card.classList.contains('expanded');
+    console.log('Detailed card is expanded:', isExpanded); // Debug log
+    
+    // Toggle current card
+    if (isExpanded) {
+        card.classList.remove('expanded');
+        console.log('Detailed card collapsed'); // Debug log
+    } else {
+        card.classList.add('expanded');
+        console.log('Detailed card expanded'); // Debug log
+    }
+}

@@ -355,6 +355,65 @@ section {
     font-size: 0.95rem;
 }
 
+/* Detailed Research Card */
+.detailed-research-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.detailed-research-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: #2563eb;
+}
+
+.detailed-card-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.detailed-card-header i {
+    font-size: 1.8rem;
+    color: #2563eb;
+    min-width: 30px;
+}
+
+.detailed-card-header h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+    flex: 1;
+}
+
+.detailed-research-card.expanded .expand-icon {
+    transform: rotate(45deg);
+}
+
+.detailed-card-content {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.detailed-research-card.expanded .detailed-card-content {
+    max-height: 2000px;
+    padding: 1.5rem;
+    opacity: 1;
+}
+
 /* Research Interests Section */
 .research-interests {
     margin-top: 2rem;
@@ -814,6 +873,18 @@ section {
 
     .highlight-card.expanded .card-content {
         padding: 0 1rem 1rem 1rem;
+    }
+
+    .detailed-card-header {
+        padding: 1rem;
+    }
+
+    .detailed-card-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .detailed-research-card.expanded .detailed-card-content {
+        padding: 1rem;
     }
 
     .about-stats {
