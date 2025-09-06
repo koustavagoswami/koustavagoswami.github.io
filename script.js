@@ -233,3 +233,26 @@ function toggleDetailedCard(card) {
     // Force a reflow to ensure the transition starts
     card.offsetHeight;
 }
+
+// Toggle year sections for publications
+function toggleYear(yearHeader) {
+    const yearCard = yearHeader.parentElement;
+    const isExpanded = yearCard.classList.contains('expanded');
+    
+    // Close all other year cards
+    document.querySelectorAll('.publication-year-card').forEach(card => {
+        if (card !== yearCard) {
+            card.classList.remove('expanded');
+        }
+    });
+    
+    // Toggle current year card
+    if (isExpanded) {
+        yearCard.classList.remove('expanded');
+    } else {
+        yearCard.classList.add('expanded');
+    }
+    
+    // Force a reflow to ensure the transition starts
+    yearCard.offsetHeight;
+}
