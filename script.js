@@ -214,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Toggle detailed research card
 function toggleDetailedCard(card) {
     console.log('Detailed card clicked:', card); // Debug log
+    console.log('Card classes before:', card.className); // Debug log
     
     const isExpanded = card.classList.contains('expanded');
     console.log('Detailed card is expanded:', isExpanded); // Debug log
@@ -226,4 +227,9 @@ function toggleDetailedCard(card) {
         card.classList.add('expanded');
         console.log('Detailed card expanded'); // Debug log
     }
+    
+    console.log('Card classes after:', card.className); // Debug log
+    
+    // Force a reflow to ensure the transition starts
+    card.offsetHeight;
 }
