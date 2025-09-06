@@ -335,15 +335,17 @@ section {
 }
 
 .card-content {
-    padding: 0 1.5rem 1.5rem 1.5rem;
+    padding: 0 1.5rem;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    opacity: 0;
+    transition: all 0.3s ease;
 }
 
 .highlight-card.expanded .card-content {
-    max-height: 200px;
+    max-height: 300px;
     padding: 0 1.5rem 1.5rem 1.5rem;
+    opacity: 1;
 }
 
 .card-content p {
@@ -807,7 +809,7 @@ section {
     }
 
     .card-content {
-        padding: 0 1rem 1rem 1rem;
+        padding: 0 1rem;
     }
 
     .highlight-card.expanded .card-content {

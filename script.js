@@ -168,7 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Toggle highlight cards
 function toggleCard(card) {
+    console.log('Card clicked:', card); // Debug log
+    
     const isExpanded = card.classList.contains('expanded');
+    console.log('Is expanded:', isExpanded); // Debug log
     
     // Close all other cards
     document.querySelectorAll('.highlight-card').forEach(otherCard => {
@@ -180,7 +183,21 @@ function toggleCard(card) {
     // Toggle current card
     if (isExpanded) {
         card.classList.remove('expanded');
+        console.log('Card collapsed'); // Debug log
     } else {
         card.classList.add('expanded');
+        console.log('Card expanded'); // Debug log
     }
 }
+
+// Alternative approach using event listeners instead of onclick
+document.addEventListener('DOMContentLoaded', () => {
+    const highlightCards = document.querySelectorAll('.highlight-card');
+    console.log('Found cards:', highlightCards.length); // Debug log
+    
+    highlightCards.forEach(card => {
+        card.addEventListener('click', function() {
+            toggleCard(this);
+        });
+    });
+});
