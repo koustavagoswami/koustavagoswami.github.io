@@ -165,3 +165,22 @@ document.addEventListener('DOMContentLoaded', () => {
         statsObserver.observe(statsSection);
     }
 });
+
+// Toggle highlight cards
+function toggleCard(card) {
+    const isExpanded = card.classList.contains('expanded');
+    
+    // Close all other cards
+    document.querySelectorAll('.highlight-card').forEach(otherCard => {
+        if (otherCard !== card) {
+            otherCard.classList.remove('expanded');
+        }
+    });
+    
+    // Toggle current card
+    if (isExpanded) {
+        card.classList.remove('expanded');
+    } else {
+        card.classList.add('expanded');
+    }
+}

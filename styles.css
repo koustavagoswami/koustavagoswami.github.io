@@ -265,6 +265,94 @@ section {
     line-height: 1.7;
 }
 
+/* Research Highlights Section */
+.research-highlights {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.research-highlights h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+    font-weight: 700;
+}
+
+.highlight-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.highlight-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #2563eb;
+}
+
+.card-header {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.card-header i {
+    font-size: 1.5rem;
+    color: #2563eb;
+    min-width: 24px;
+}
+
+.card-header h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    flex: 1;
+}
+
+.expand-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6b7280;
+    transition: transform 0.3s ease;
+}
+
+.highlight-card.expanded .expand-icon {
+    transform: rotate(45deg);
+}
+
+.card-content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.highlight-card.expanded .card-content {
+    max-height: 200px;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.card-content p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
 /* Research Interests Section */
 .research-interests {
     margin-top: 2rem;
@@ -703,6 +791,27 @@ section {
 
     .research-interest-item li {
         font-size: 0.95rem;
+    }
+
+    .highlight-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card-header {
+        padding: 1rem;
+    }
+
+    .card-header h4 {
+        font-size: 1rem;
+    }
+
+    .card-content {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .highlight-card.expanded .card-content {
+        padding: 0 1rem 1rem 1rem;
     }
 
     .about-stats {
