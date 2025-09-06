@@ -133,6 +133,37 @@ body {
     line-height: 1.6;
 }
 
+/* Hero Highlight Section */
+.hero-highlight {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.highlight-text a {
+    color: #fff !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+    transition: opacity 0.3s ease;
+}
+
+.highlight-text a:hover {
+    opacity: 0.8;
+}
+
 .hero-buttons {
     display: flex;
     gap: 1rem;
@@ -628,6 +659,15 @@ section {
     .hero-buttons {
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .hero-highlight {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .highlight-text {
+        font-size: 1rem;
     }
 
     .about-content {
